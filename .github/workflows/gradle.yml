@@ -36,11 +36,11 @@ jobs:
       with:
         java-version: 1.8
 
-      secrets:
-        SRCCLR_API_TOKEN: ${{ secrets.SRCCLR_API_TOKEN }}
-        SRCCLR_WORKSPACE_SLUG: ${{ secrets.SRCCLR_WORKSPACE_SLUG }}
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Run SCA Scan
         run: ./gradlew srcclr
+        env:
+          SRCCLR_API_TOKEN: ${{ secrets.SRCCLR_API_TOKEN }}
+          SRCCLR_WORKSPACE_SLUG: ${{ secrets.SRCCLR_WORKSPACE_SLUG }}
