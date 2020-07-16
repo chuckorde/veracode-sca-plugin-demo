@@ -2,9 +2,9 @@
 
 This repo contains a basic Kotlin project for demonstrating the Veracode SCA Agent plugin.
 
-## Build
+## Build the Project
 ```
-$ git clone git@github.com:chuckorde/veracode-sca-plugin-demo.git
+$ git clone https://github.com/chuckorde/veracode-sca-plugin-demo
 $ cd veracode-sca-plugin-demo
 $ cat src/main/kotlin/main.kt
 import org.apache.commons.net.util.Base64
@@ -24,6 +24,5 @@ Hello World!
 ```
 $ export SRCCLR_API_TOKEN=...
 $ ./gradlew srcclr
-
 ```
 
